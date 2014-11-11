@@ -1,0 +1,85 @@
+Diary
+For the first week, I had decided to create a Dig Dug clone.
+    This was going well, I learned Pygame basics, but it soon became apparent that
+    to create a perfect clone of the game would take more time and effort than:
+    a) I had available
+    b) I could be bothered to put in
+So I scrapped that idea, and on the second week started on my next: an original, speed/reflexes game.
+    Having learned more advanced Pygame, I tried to add some more advanced concepts into
+    it, but gave up on my main vision for the game for the same reasons as above. I 
+    had enough to throw in as a prototype and get good marks for, but it still felt
+    unfinished.
+My third idea in the fourth week was an Asteroid clone, but I quickly learned that Pygame sprite rotation and trig hurts.
+Finally I settled for a PvP Space Invader/Tanks game, and this seemed to work out.
+This is basically the log of the two days I developed it in:
+Saturday 1/11/14:
+    Started development.
+    Drew custom art and spritesheets
+	Wrote up basic program structure
+    Wrote up Player() object
+    Wrote the spritesheet-reading code (not the grabbing code, the storing code)
+    Messed around with changing sprites in a sheet for about an hour
+		When you change a sprite by setting sprite.image it resets the position of the
+		sprite. I had to get around this.
+	Settled on a difference of Pygame system time for a threaded delay between
+		changing sprites
+	Made the bullet sheets
+	Remade them because they sucked
+	Messed with surface.colorkey and PNG transparencies
+	Made the player shoot :D
+	Discovered sprite.kill() and made things disappear
+	Generated explosions!
+	Added bombs
+	Added BIG explosions
+	Synth'd sounds
+	Researched and sequenced music
+	Added in audio via pygame.mixer
+Sunday 2/11/14:
+	Added the blocks
+	Added hearts
+	Added score
+	Added bomb limits
+	Added Fullscreen Mode
+	Retuned music
+Oh and those things we had to show our understanding of:
+Variables store values under names in memory:
+ In[0]:	x = 10
+ In[1]:	print(x)
+Out[1]:	10
+For loops iterate through a series of items, such as those in a list:
+for item in list:
+	print(item)
+Would call the print() function on every item in the list
+While loops repeat a section of code until a certain statement is made true:
+x = input('> ')
+while not x == 'Goodbye.':
+	print('Hello!')
+	x = input('> ')
+Would print out 'Hello!' until the user says 'Goodbye.'
+If/Elif/Else statements activate blocks of code if certain statements are true:
+if x == 1:
+	print('x is 1.')
+elif x == 0:
+	print('x is 0.')
+else:
+	print('x isn't 1 or 0, but it could be anything else!')
+Functions are bits of code that are 'callable' by their names:
+def say_hello():
+	print('Hello!')
+You can pass arguments (variables) to them:
+ In[1]:	def times_two(n):
+	...		return n * 2
+ In[2]:	times_two(4)
+Out[2]:	8
+A basic Pygame program structure:
+import libraries
+pygame.init()
+screen = pygame.display.set_mode(blah)
+variable assignment
+classes
+while not done: loop
+	event checker
+	update functions
+	drawing functions
+	pygame.display.flip()
+	clock.tick(60)
